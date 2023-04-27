@@ -121,7 +121,7 @@ const ChoiceCard = ({
             title="Win rate in the quiz participated"
             value={choice.champ}
             max={choice.totalQuiz}
-            className="[&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg   [&::-webkit-progress-bar]:bg-customGray [&::-webkit-progress-value]:bg-blue-400 [&::-moz-progress-bar]:bg-blue-400 w-96 "
+            className="w-full [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg   [&::-webkit-progress-bar]:bg-customGray [&::-webkit-progress-value]:bg-blue-400 [&::-moz-progress-bar]:bg-blue-400"
           />
           <span className="text-white font-bold">
             {choice.totalQuiz === 0
