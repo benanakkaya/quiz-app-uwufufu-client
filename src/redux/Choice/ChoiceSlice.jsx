@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { set } from "mongoose";
 
 export const addNewChoice = createAsyncThunk(
   "choice/new-choice",
