@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -18,8 +18,6 @@ const QuizPage = () => {
 
   const { quiz, playModalVisibility } = useSelector((state) => state.quiz);
   const { loginnedUser, isLoginned } = useSelector((state) => state.user);
-
-  const [activeVideo, setActiveVideo] = useState(null);
 
   const navigate = useNavigate();
 

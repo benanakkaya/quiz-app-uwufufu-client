@@ -1,5 +1,4 @@
 import React from "react";
-import { AiFillEdit } from "react-icons/ai";
 
 const QuizCard = ({ quiz, userPage }) => {
   return (

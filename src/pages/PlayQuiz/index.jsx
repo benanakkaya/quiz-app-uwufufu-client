@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -10,8 +10,6 @@ const PlayQuiz = () => {
   const { gameChoices, choice1, choice2, totalTour, currentTour, champ } =
     useSelector((state) => state.choice);
   const { quiz } = useSelector((state) => state.quiz);
-
-  console.log(champ);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

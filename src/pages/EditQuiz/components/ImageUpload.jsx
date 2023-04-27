@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useCallback, useRef, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { BsImage } from "react-icons/bs";

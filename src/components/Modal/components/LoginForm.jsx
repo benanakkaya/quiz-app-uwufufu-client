@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { MdEmail, MdKey } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   loginRequest,
   setModalForm,
   setModalVisiblity,
 } from "../../../redux/User/UserSlice";
-import FormButton from "./FormButton";
 import FormInput from "./FormInput";
 import ModalHeader from "./ModalHeader";
 import * as yup from "yup";
@@ -16,8 +15,6 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
-
-  const { isLoginned } = useSelector((state) => state.user);
 
   const [loginStatus, setLoginStatus] = useState("idle");
 
