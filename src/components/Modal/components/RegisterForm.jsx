@@ -68,6 +68,7 @@ const RegisterForm = () => {
       dispatch(registerRequest(values)).then((res) => {
         if (res.type === "user/register/rejected") {
           toast.error(res.payload.message);
+          setRegisterStatus("idle");
         } else {
           setRegisterStatus("ready");
           toast.success(res.payload.message);
