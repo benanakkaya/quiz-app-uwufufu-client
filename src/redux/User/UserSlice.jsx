@@ -6,7 +6,7 @@ export const loginRequest = createAsyncThunk(
   async (values, thunkAPI) => {
     try {
       const res = await axios.post(
-        "https://quiz-app-uwufufu-backend.herokuapp.com/user/login",
+        "https://quiz-app-backend-kn9w.onrender.com/user/login",
         values
       );
       return res.data;
@@ -21,7 +21,7 @@ export const registerRequest = createAsyncThunk(
   async (values, thunkAPI) => {
     try {
       const res = await axios.post(
-        "https://quiz-app-uwufufu-backend.herokuapp.com/user/register",
+        "https://quiz-app-backend-kn9w.onrender.com/user/register",
         values
       );
       return res.data;
@@ -33,7 +33,7 @@ export const registerRequest = createAsyncThunk(
 
 export const getUserData = createAsyncThunk("user/getUserData", async (id) => {
   const res = await axios.post(
-    "https://quiz-app-uwufufu-backend.herokuapp.com/user/getUserData",
+    "https://quiz-app-backend-kn9w.onrender.com/user/getUserData",
     {
       id,
     }

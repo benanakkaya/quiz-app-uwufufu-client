@@ -16,7 +16,7 @@ const CommentList = ({ quiz }) => {
   const handleDelete = async (id) => {
     const res = await axios
       .post(
-        "https://quiz-app-uwufufu-backend.herokuapp.com/comment/delete-comment",
+        "https://quiz-app-backend-kn9w.onrender.com/comment/delete-comment",
         {
           id,
           quizID: quiz._id,

@@ -15,7 +15,7 @@ export const createNewQuiz = createAsyncThunk(
   async (user, thunkAPI) => {
     try {
       const res = await axios.post(
-        "https://quiz-app-uwufufu-backend.herokuapp.com/quiz/new-quiz",
+        "https://quiz-app-backend-kn9w.onrender.com/quiz/new-quiz",
         {
           user,
         }
@@ -32,7 +32,7 @@ export const getAllQuizzes = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios.get(
-        "https://quiz-app-uwufufu-backend.herokuapp.com/quiz/get-all-quizzes"
+        "https://quiz-app-backend-kn9w.onrender.com/quiz/get-all-quizzes"
       );
       return res.data;
     } catch (error) {
@@ -46,7 +46,7 @@ export const fetchSearchedQuiz = createAsyncThunk(
   async (index, thunkAPI) => {
     try {
       const res = await axios.post(
-        "https://quiz-app-uwufufu-backend.herokuapp.com/quiz/search-quiz",
+        "https://quiz-app-backend-kn9w.onrender.com/quiz/search-quiz",
         {
           index,
         }
@@ -63,7 +63,7 @@ export const getUserQuizzes = createAsyncThunk(
   async (id, thunkAPI) => {
     try {
       const res = await axios.post(
-        "https://quiz-app-uwufufu-backend.herokuapp.com/quiz/get-user-quizzes",
+        "https://quiz-app-backend-kn9w.onrender.com/quiz/get-user-quizzes",
         { userID: id }
       );
       return res.data;
@@ -78,7 +78,7 @@ export const deleteQuiz = createAsyncThunk(
   async (values, thunkAPI) => {
     try {
       const res = await axios.post(
-        "https://quiz-app-uwufufu-backend.herokuapp.com/quiz/delete-quiz",
+        "https://quiz-app-backend-kn9w.onrender.com/quiz/delete-quiz",
         values
       );
       return res.data;
@@ -93,7 +93,7 @@ export const getQuiz = createAsyncThunk(
   async (quizID, thunkAPI) => {
     try {
       const res = await axios.post(
-        `https://quiz-app-uwufufu-backend.herokuapp.com/quiz/get-quiz`,
+        `https://quiz-app-backend-kn9w.onrender.com/quiz/get-quiz`,
         {
           quizID,
         }
@@ -115,7 +115,7 @@ export const getEditQuiz = createAsyncThunk(
     const decodedToken = jwt_decode(token);
     try {
       const res = await axios.post(
-        `https://quiz-app-uwufufu-backend.herokuapp.com/quiz/get-edit-quiz`,
+        `https://quiz-app-backend-kn9w.onrender.com/quiz/get-edit-quiz`,
         {
           quizID,
           userID: decodedToken._id,
@@ -145,7 +145,7 @@ export const updateQuiz = createAsyncThunk(
         values = { ...values, coverImage };
       }
       const res = await axios.post(
-        "https://quiz-app-uwufufu-backend.herokuapp.com/quiz/update-quiz",
+        "https://quiz-app-backend-kn9w.onrender.com/quiz/update-quiz",
         values
       );
       return res.data;

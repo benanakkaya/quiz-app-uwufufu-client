@@ -47,7 +47,7 @@ const CommentForm = ({ quiz }) => {
       } else {
         const res = await axios
           .post(
-            "https://quiz-app-uwufufu-backend.herokuapp.com/comment/new-comment",
+            "https://quiz-app-backend-kn9w.onrender.com/comment/new-comment",
             {
               ...comment,
               quizID: quiz._id,

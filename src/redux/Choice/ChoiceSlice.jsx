@@ -5,7 +5,7 @@ export const addNewChoice = createAsyncThunk(
   "choice/new-choice",
   async (values) => {
     const res = await axios.post(
-      "https://quiz-app-uwufufu-backend.herokuapp.com/choice/new-choice",
+      "https://quiz-app-backend-kn9w.onrender.com/choice/new-choice",
       values
     );
     return res.data;
@@ -16,7 +16,7 @@ export const deleteChoice = createAsyncThunk(
   "choice/delete-choice",
   async (values) => {
     const res = await axios.post(
-      `https://quiz-app-uwufufu-backend.herokuapp.com/choice/delete-choice`,
+      `https://quiz-app-backend-kn9w.onrender.com/choice/delete-choice`,
       values
     );
     return res.data;
@@ -27,7 +27,7 @@ export const editChoice = createAsyncThunk(
   "choice/edit-choice",
   async (values) => {
     const res = await axios.post(
-      `https://quiz-app-uwufufu-backend.herokuapp.com/choice/edit-choice`,
+      `https://quiz-app-backend-kn9w.onrender.com/choice/edit-choice`,
       values
     );
     return res.data;
@@ -38,7 +38,7 @@ export const getGameChoices = createAsyncThunk(
   "choice/get-game-choices",
   async (values) => {
     const res = await axios.post(
-      "https://quiz-app-uwufufu-backend.herokuapp.com/choice/get-game-choices",
+      "https://quiz-app-backend-kn9w.onrender.com/choice/get-game-choices",
       values
     );
     return res.data;
@@ -47,7 +47,7 @@ export const getGameChoices = createAsyncThunk(
 
 export const setWinningChoice = async (id) => {
   const res = await axios.post(
-    "https://quiz-app-uwufufu-backend.herokuapp.com/choice/winning-choice",
+    "https://quiz-app-backend-kn9w.onrender.com/choice/winning-choice",
     {
       id,
     }
@@ -56,7 +56,7 @@ export const setWinningChoice = async (id) => {
 };
 export const setLosingChoice = async (id) => {
   const res = await axios.post(
-    "https://quiz-app-uwufufu-backend.herokuapp.com/choice/losing-choice",
+    "https://quiz-app-backend-kn9w.onrender.com/choice/losing-choice",
     {
       id,
     }
@@ -65,7 +65,7 @@ export const setLosingChoice = async (id) => {
 };
 export const setChampChoice = async (id) => {
   const res = await axios.post(
-    "https://quiz-app-uwufufu-backend.herokuapp.com/choice/champ-choice",
+    "https://quiz-app-backend-kn9w.onrender.com/choice/champ-choice",
     {
       id,
     }
