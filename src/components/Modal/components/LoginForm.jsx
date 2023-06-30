@@ -85,7 +85,7 @@ const LoginForm = () => {
               Logging on...
             </span>
           ) : (
-            "Create one"
+            "Login"
           )}
         </button>
       </form>
