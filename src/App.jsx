@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-customDark min-h-screen flex flex-col ">
+    <div className="bg-customDark min-h-screen ">
       <Router>
         <ToastContainer
           position="top-right"
@@ -45,19 +45,20 @@ function App() {
         />
         <Header />
         <Modal />
-
-        <Routes>
-          <Route path="/edit/:quizID" element={<EditQuiz />} />
-          <Route path="/quiz/:quizID" element={<QuizPage />} />
-          <Route path="/my-quizzes" element={<MyQuizzes />} />
-          <Route path="/search/:searchIndex" element={<SearchPage />} />
-          <Route
-            path="/quiz/:quizID/play/:quizType"
-            exact
-            element={<PlayQuiz />}
-          />
-          <Route path="/" exact element={<Homepage />} />
-        </Routes>
+        <div className="flex flex-col container ">
+          <Routes>
+            <Route path="/edit/:quizID" element={<EditQuiz />} />
+            <Route path="/quiz/:quizID" element={<QuizPage />} />
+            <Route path="/my-quizzes" element={<MyQuizzes />} />
+            <Route path="/search/:searchIndex" element={<SearchPage />} />
+            <Route
+              path="/quiz/:quizID/play/:quizType"
+              exact
+              element={<PlayQuiz />}
+            />
+            <Route path="/" exact element={<Homepage />} />
+          </Routes>
+        </div>
       </Router>
     </div>
   );

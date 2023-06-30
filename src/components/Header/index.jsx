@@ -39,7 +39,7 @@ const Header = () => {
 
   return (
     <div className="w-full bg-customDark border-b border-[1px] border-customGray  text-white relative">
-      <div className="px-6 sm:px-8 md:px-10 lg:px-12 py-6  flex items-center justify-between">
+      <div className="container px-6 sm:px-8 md:px-10 lg:px-12 py-6  flex items-center justify-between">
         <div className="flex items-center gap-6">
           <a href="/" className="text-3xl text-customRed font-bold">
             MernQuiz
