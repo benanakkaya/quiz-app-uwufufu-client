@@ -13,15 +13,12 @@ const Modal = () => {
     <>
       {modalVisibility && (
         <div
-          className="fixed flex w-full items-center justify-center h-screen"
-          style={{ zIndex: "2" }}
+          className="fixed w-full inset-0 z-30 flex items-center justify-center"
         >
-          <div className="fixed inset-0 transition-opacity">
             <div
               onClick={() => dispatch(setModalVisiblity(false))}
               className="absolute inset-0 bg-gray-600 opacity-75"
             ></div>
-          </div>
           <div className="bg-customDark rounded-lg shadow relative w-80 md:w-96 p-3">
             <div className="flex items-center w-full justify-end  p-2">
               <AiOutlineCloseCircle

@@ -131,8 +131,8 @@ export const getEditQuiz = createAsyncThunk(
 export const uploadImage = async (image) => {
   const formData = new FormData();
   formData.append("file", image);
-  formData.append("upload_preset", import.meta.env.VITE_UPLOAD_PRESET);
-  const res = await axios.post(import.meta.env.VITE_UPLOAD_URL, formData);
+  formData.append("upload_preset", "lhdtso3x");
+  const res = await axios.post("https://api.cloudinary.com/v1_1/dmsj8hghq/image/upload", formData);
   return res.data.secure_url;
 };
 
@@ -140,16 +140,19 @@ export const updateQuiz = createAsyncThunk(
   "quiz/updateQuiz",
   async (values, thunkAPI) => {
     try {
+      console.log(values.coverImage);
       if (typeof values.coverImage !== "string" || !values.coverImage) {
         const coverImage = await uploadImage(values.coverImage);
         values = { ...values, coverImage };
       }
+      console.log(values,"ahavalue")
       const res = await axios.post(
         "https://quiz-app-backend-kn9w.onrender.com/quiz/update-quiz",
         values
       );
       return res.data;
     } catch (error) {
+      console.log("hata var gulum")
       return thunkAPI.rejectWithValue(error.response.data);
     }
   }

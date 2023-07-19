@@ -32,7 +32,7 @@ function App() {
     <div className="bg-customDark min-h-screen ">
       <Router>
         <ToastContainer
-          position="top-right"
+          position="bottom-right"
           autoClose={2000}
           hideProgressBar={false}
           newestOnTop={false}

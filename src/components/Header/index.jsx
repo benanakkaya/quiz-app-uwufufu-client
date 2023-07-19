@@ -32,7 +32,7 @@ const Header = () => {
 
   const handleCreateQuiz = () => {
     dispatch(createNewQuiz(loginnedUser._id)).then((res) => {
-      toast.success(res.payload.message);
+      // toast.success(res.payload.message);
       navigate(`/edit/${res.payload.newQuiz._id}`);
     });
   };
