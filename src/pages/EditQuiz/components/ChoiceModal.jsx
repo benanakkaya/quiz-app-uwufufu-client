@@ -16,13 +16,13 @@ const ChoiceModal = () => {
   );
 
   return (
-    <div className="fixed flex w-full  text-red-500" style={{ zIndex: "2" }}>
+    <div className="fixed flex w-full text-red-500" style={{ zIndex: "2" }}>
       <div className="fixed inset-0 w-full h-full flex items-center justify-center transition-opacity">
         <div
           onClick={() => dispatch(setChoiceModalVisiblity(false))}
           className="absolute inset-0 bg-gray-600 opacity-75"
         ></div>
-        <div className="bg-customDark rounded-lg shadow relative  p-3 m-3">
+        <div className="bg-customDark rounded-lg shadow relative w-4/5 md:w-3/5  p-3 m-3">
           <div className="flex items-center w-full justify-end  p-2">
             <AiOutlineCloseCircle
               onClick={() => dispatch(setChoiceModalVisiblity(false))}

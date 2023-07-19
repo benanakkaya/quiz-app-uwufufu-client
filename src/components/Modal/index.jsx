@@ -19,7 +19,7 @@ const Modal = () => {
               onClick={() => dispatch(setModalVisiblity(false))}
               className="absolute inset-0 bg-gray-600 opacity-75"
             ></div>
-          <div className="bg-customDark rounded-lg shadow relative w-80 md:w-96 p-3">
+          <div className="bg-customDark rounded-lg shadow relative w-4/5 md:w-96 p-3">
             <div className="flex items-center w-full justify-end  p-2">
               <AiOutlineCloseCircle
                 onClick={() => dispatch(setModalVisiblity(false))}
