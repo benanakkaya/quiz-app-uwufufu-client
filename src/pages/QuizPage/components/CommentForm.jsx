@@ -24,7 +24,10 @@ const CommentForm = ({ quiz }) => {
         author: loginnedUser._id,
       }));
       setAuthor(loginnedUser.username);
+    }else{
+      setAuthor("Anonymous");
     }
+
   }, [loginnedUser]);
 
   const handleAnonymous = (e) => {
@@ -82,6 +85,8 @@ const CommentForm = ({ quiz }) => {
             onChange={(e) => handleAnonymous(e)}
             type="checkbox"
             value="Anonymous"
+            checked={isLoginned ? false : true }
+            disabled={isLoginned ? false : true}
           />
           Anonymous
         </label>
@@ -92,6 +97,7 @@ const CommentForm = ({ quiz }) => {
           onChange={(e) =>
             setComment((prev) => ({ ...prev, text: e.target.value }))
           }
+          
           value={comment.text}
           placeholder="Input your massage"
           className="bg-customDark border-[2px] border-customGray px-2 py-1 rounded-lg min-h-[150px] max-h-[250px] placeholder:italic "

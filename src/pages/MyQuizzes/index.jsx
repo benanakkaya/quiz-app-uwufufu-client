@@ -27,7 +27,7 @@ const MyQuizzes = () => {
         <>
           {quizList.length === 0 ? (
             <div className="flex items-center justify-center italic text-2xl  text-customRed py-10">
-              No quizzes found to list
+              You haven't created a quiz yet.
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 px-6 sm:px-8 md:px-10 lg:px-12 py-6">
