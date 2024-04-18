@@ -21,7 +21,7 @@ const ChoiceList = ({ editMode }) => {
       {choiceModalVisibility && <ChoiceModal />}
       <strong className="text-lg text-white">Saved Choices</strong>
       {quiz.choices?.length === 0 ? (
-        <span className="w-full flex flex-col items-center justify-center text-customGray text-3xl font-bold">
+        <span className="w-full italic flex flex-col items-center justify-center text-customGray text-3xl ">
           Choice list is empty
         </span>
       ) : (

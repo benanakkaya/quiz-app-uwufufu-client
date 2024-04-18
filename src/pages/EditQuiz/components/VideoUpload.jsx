@@ -28,7 +28,7 @@ const VideoUpload = ({ choice, setChoice, editActive }) => {
     }
   };
 
-  function extractVideoIdFromLink(link) {
+  async function extractVideoIdFromLink(link) {
     //Geçerli bir youtube linki olduğunu kontrol eden regex
     const youtubeRegex =
       /^(?:(?:https?:)?\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=))([\w-]{11})(?:\S+)?$/;
@@ -37,12 +37,14 @@ const VideoUpload = ({ choice, setChoice, editActive }) => {
     if (!youtubeRegex.test(link)) {
       setLinkError(true);
     }
+    else {
+      const match = link.match(youtubeRegex);
+      const videoId = match[1];
+      fetchVideoInfo(videoId);
+      setVideoId(videoId);
+      setLinkError(false);
+    }
 
-    const match = link.match(youtubeRegex);
-    const videoId = match[1];
-    fetchVideoInfo(videoId);
-    setVideoId(videoId);
-    setLinkError(false);
   }
 
   const handleUpload = () => {

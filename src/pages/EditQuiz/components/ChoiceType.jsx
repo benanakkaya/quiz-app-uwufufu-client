@@ -1,6 +1,7 @@
 import React from "react";
 
 const ChoiceType = ({ choice, setChoice }) => {
+
   const videoSVG = (
     <svg
       data-v-21653653=""
@@ -76,7 +77,7 @@ const ChoiceType = ({ choice, setChoice }) => {
       <div className="flex flex-col md:flex-row gap-4 w-full items-center justify-around ">
         <div className="flex flex-col gap-4 items-center">
           <div
-            onClick={() => setChoice({ ...choice, choiceType: "image" })}
+            onClick={() => setChoice({ ...choice, choiceType: "image", url: "", title:"" })}
             className={`flex cursor-pointer gap-4 flex-col items-center justify-center py-8 px-16 rounded-lg border-[1.5px] ${
               choice.choiceType === "image"
                 ? "border-customRed"
@@ -95,7 +96,7 @@ const ChoiceType = ({ choice, setChoice }) => {
         </div>
         <div className="flex flex-col gap-4 items-center">
           <div
-            onClick={() => setChoice({ ...choice, choiceType: "video" })}
+            onClick={() => setChoice({ ...choice, choiceType: "video", url: "", title:"" })}
             className={`flex cursor-pointer  gap-4 flex-col items-center justify-center py-8 px-16 rounded-lg border-[1.5px] ${
               choice.choiceType === "video"
                 ? "border-customRed"

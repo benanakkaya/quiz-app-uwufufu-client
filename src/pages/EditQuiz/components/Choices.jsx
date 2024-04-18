@@ -16,10 +16,7 @@ const Choices = () => {
     quiz: quiz._id,
   });
 
-  //Seçim tipi değiştiğinde "choice" stateini sıfırlıyoruz
-  useEffect(() => {
-    setChoice({ ...choice, title: "", url: "" });
-  }, [choice.choiceType]);
+
 
   return (
     <div className="flex flex-col gap-3 py-6">
